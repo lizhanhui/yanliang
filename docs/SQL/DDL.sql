@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS user (
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(50) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  token VARCHAR(5) NOT NULL,
+  active BOOL NOT NULL DEFAULT FALSE,
+  create_user_id INT,
+  create_date DATETIME,
+  modify_user_id INT,
+  modify_date DATETIME
+) CHARACTER SET UTF8;
+

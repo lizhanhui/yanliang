@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="tv.yanliang.mapper.UserMapper">
+    <select id="get" parameterType="long" resultType="User">
+        SELECT id, name, password, email, token, active, create_user_id, create_date, modify_user_id, modify_date
+        FROM user
+    </select>
+    
+    <select id="getAll" parameterType="map" resultType="User">
+       SELECT id, name, password, email, token, active, create_user_id, create_date, modify_user_id, modify_date
+        FROM user LIMIT #{start}, #{max}
+    </select>
+</mapper>

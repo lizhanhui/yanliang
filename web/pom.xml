@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <artifactId>yanliang</artifactId>
+      <groupId>tv.yanliang</groupId>
+      <version>1.0-SNAPSHOT</version>
+   </parent>
+
+   <artifactId>yanliang-web</artifactId>
+   <packaging>war</packaging>
+
+   <name>yanliang - web</name>
+
+   <url>http://yanliang.tv</url>
+
+    <properties>
+        <spring.version>3.2.4.RELEASE</spring.version>
+    </properties>
+
+
+    <dependencies>
+      <dependency>
+         <groupId>tv.yanliang</groupId>
+         <artifactId>yanliang-ejb</artifactId>
+         <type>ejb</type>
+         <scope>provided</scope>
+      </dependency>
+
+       <dependency>
+           <groupId>log4j</groupId>
+           <artifactId>log4j</artifactId>
+           <version>1.2.17</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>javax.servlet</groupId>
+           <artifactId>jstl</artifactId>
+           <version>1.1.0</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>taglibs</groupId>
+           <artifactId>standard</artifactId>
+           <version>1.1.0</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>javax.servlet.jsp</groupId>
+           <artifactId>jsp-api</artifactId>
+           <version>2.2</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>javax.servlet</groupId>
+           <artifactId>servlet-api</artifactId>
+           <version>2.5</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.mybatis</groupId>
+           <artifactId>mybatis</artifactId>
+           <version>3.1.1</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.mybatis</groupId>
+           <artifactId>mybatis-spring</artifactId>
+           <version>1.2.0</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-web</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-webmvc</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-context</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-context-support</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-beans</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-aspects</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-jdbc</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-core</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-aop</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-instrument</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-tx</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework</groupId>
+           <artifactId>spring-orm</artifactId>
+           <version>${spring.version}</version>
+           <scope>provided</scope>
+       </dependency>
+   </dependencies>
+
+   <build>
+      <finalName>${project.artifactId}</finalName>
+      <plugins>
+         <plugin>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>${version.war.plugin}</version>
+            <configuration>
+               <failOnMissingWebXml>true</failOnMissingWebXml>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+    <repositories>
+        <repository>
+            <id>maven2-repository.dev.java.net</id>
+            <name>Java.net Repository for Maven</name>
+            <url>http://download.java.net/maven/2/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>
